@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://books:books123@cluster0.23z4i.mongodb.net/books?retryWrites=true&w=majority",
+  "jwtSecret": "1234567",
+  "mailgun-api": "620427ce759eb656d05a93a94d3de73f-203ef6d0-d90e3f2b",
+  "mailgun-domain": "sandbox8ed48e9537144f4d80c41b7b195c74f7.mailgun.org"
+}
