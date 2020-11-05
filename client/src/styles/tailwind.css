@@ -1,0 +1,43 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-green {
+  @apply bg-teal-400 text-white;
+}
+
+.btn-green:hover {
+  @apply bg-teal-300;
+}
+
+.searchContainer {
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchIcon {
+  padding: 0.5rem;
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+}
+
+.searchButton {
+/*   background: #538AC5; */
+  border: 0;
+  color: #538AC5;
+  padding: 0.5rem;
+  border-radius: 0;
+}

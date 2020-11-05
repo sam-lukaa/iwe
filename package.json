@@ -1,0 +1,37 @@
+{
+  "name": "book_manager",
+  "version": "1.0.0",
+  "description": "Social network for students",
+  "main": "server.js",
+  "author": "Samuel Lucas",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server --ignore client",
+    "client": "yarn --cwd ./client run start",
+    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.0",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^5.9.27",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "redux": "^4.0.5",
+    "request": "^2.88.2",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
