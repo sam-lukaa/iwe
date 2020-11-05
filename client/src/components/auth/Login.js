@@ -20,7 +20,7 @@ const Login = ({ login, isAuthenticated, loading }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    login({ email, password });
+    login(email, password);
   };
 
   // Redirect if logged in

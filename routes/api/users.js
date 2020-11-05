@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 
 const User = require("../../models/User");
-const Book = require("../../models/Book");
+// const Book = require("../../models/Book");
 
 //  @route    GET api/users
 //  @desc     Test route

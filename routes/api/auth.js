@@ -8,6 +8,11 @@ const config = require("config");
 const auth = require("../../middleware/auth");
 const User = require("../../models/User");
 
+require("dotenv").config;
+
+// process.env
+let jwtSecret = process.env.jwtSecret;
+
 //  @route    GET api/auth
 //  @desc     Test route
 //  @access   Public
@@ -62,15 +67,10 @@ router.post(
           .json({ errors: [{ msg: "Invalid credentials" }] });
       }
 
-      jwt.sign(
-        payload,
-        config.get("jwtSecret"),
-        { expiresIn: 360000 },
-        (err, token) => {
-          if (err) throw err;
-          res.json({ token });
-        }
-      );
+      jwt.sign(payload, jwtSecret, { expiresIn: 360000 }, (err, token) => {
+        if (err) throw err;
+        res.json({ token });
+      });
     } catch (err) {
       console.error("err.message");
       console.log(err.response);
